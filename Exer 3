@@ -1,0 +1,27 @@
+public class Cliente {
+    public void calcularDesconto(double valor){
+        System.out.println("Seu valor antes do desconto: " + valor);
+        valor = valor - (valor * 0.10);
+        System.out.println("Seu valor depois do desconto: " + valor);
+    }
+}
+
+
+public class ClienteEspecial extends Cliente {
+    @Override
+    public void calcularDesconto(double valor){
+        System.out.println("Valor cliente especial antes do desconto: " + valor);
+        valor = valor - (valor * 0.20);
+        System.out.println("Valor cliente especial depois o desconto: " + valor);
+    }
+}
+
+
+public class TestCliente {
+    public static void main(String[] args) {
+        Cliente c1 = new Cliente();
+        Cliente c2 = new ClienteEspecial();
+        c1.calcularDesconto(100);
+        c2.calcularDesconto(100);
+    }
+}
