@@ -1,0 +1,13 @@
+4. Não há impacto no código cliente.
+
+5. 
+public class TestVeiculo {
+    public static void main(String[] args) {
+        Veiculos[] lista = { new Carro(), new Moto(), new Caminhao() };
+
+        for (Veiculos v : lista) {
+            v.precoDesconto();
+            System.out.println();
+        }
+    }
+}
