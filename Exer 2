@@ -1,0 +1,42 @@
+public class Cachorro extends Animal {
+    @Override
+    public void emitirSom(){
+        System.out.println("Au!");
+    }
+}
+
+
+
+public class Gato extends Animal {
+    @Override
+    public void emitirSom(){
+        System.out.println("Miau!");
+    }
+}
+
+
+public class Preguica extends Animal {
+    public void emitirSom(){
+        System.out.println("Sono!");
+    }
+}
+
+
+public class Animal {
+    public void emitirSom(){}
+}
+
+
+
+public class TestAnimal {
+    public static void main(String[] args) {
+        Animal cachorro = new Cachorro();
+        Animal gato = new Gato();
+        Animal preguica = new Preguica();
+        Animal[] animais = {cachorro, gato, preguica};
+        for(Animal a : animais){
+            a.emitirSom();
+            System.out.println();
+        }
+    }
+}
